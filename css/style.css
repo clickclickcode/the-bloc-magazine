@@ -1,0 +1,578 @@
+/*Global*/
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+
+/*  HEADER  */
+
+.header-forside {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/indendørs-klatring-på-overhang.jpg);
+    background-size: cover;
+    border-bottom: 2px solid #ef4820;
+}
+
+
+    /*  NAVBAR  */
+
+
+.topnav {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, .5);
+    height: 10%;
+    justify-content: space-between;
+}
+
+.topnav > * {
+    width: 25%;
+}
+
+
+#logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo-img {
+    width: 150px;
+    height: auto;
+}
+
+#navlinks {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    width: 100%;
+}
+
+.navlink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+
+.navlink:hover {
+    background-color: rgba(2, 83, 115, .5);
+    transition: .3s;
+    border-radius: 10px;
+}
+
+.navlink a {
+    color: white;
+    font-size: 3vw;
+}
+
+
+/*  Search Bar  */
+
+/*  Denne er fundet på https://freefrontend.com/css-search-boxes/ og er originalt lavet af Omar Sherif, den er derefter forsøgt tilpasset til denne side  */
+
+/*  Der skal lige arbejdes lidt på transitionen når man hover, hvilken er lidt clunky  */
+
+.searchBox-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.searchBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.searchButton {
+    color: white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #025373;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease-in-out;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 1s ease-in-out;
+    line-height: 40px;
+    width: 0px;
+}
+
+.searchBox:hover > .searchInput {
+    width: 70%;
+    padding: 0 5px;
+    transition: .5s;
+}
+
+.searchBox:hover > .searchButton {
+    background: rgba(239, 72, 32, .5);
+    color : #2f3640;
+}
+
+
+    /*  HERO IMAGE  */
+
+
+#hero-text-wrapper {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(2, 83, 115, .5);
+    color: white;
+}
+
+#hero-text h1 {
+    font-size: 10vw;
+    text-align: center;
+}
+
+#hero-text p {
+    font-size: 50px;
+}
+
+
+/*  MAIN  */
+
+
+.outer-wrapper {
+    display: flex;
+    justify-content: center;
+    background-color: #cccdcf;
+}
+
+.wrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #cccdcf;
+}
+
+
+    /*  CONTENT  */
+
+
+.content {
+    width: 100%;
+    background-color: #025373;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid #ef4820;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    padding: 3% 0;
+    box-sizing: border-box;
+}
+
+
+/*  Artikel afsnit  -  alternativ-article  */
+
+.alt-art {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+/*  Wrapper til text-kas og textpic  */
+
+.textpic-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 8px 16px;
+    box-sizing: border-box;
+}
+
+
+/*  Definerer bredden på text-kas og textpic  */
+
+.text-kas, .textpic {
+    width: 50%;
+}
+
+
+/*  Billedet der kan ses til højre på skærmen ved siden af h2 og p der beskriver afsnittet  */
+
+.textpic {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+/*  H2 i .text-kas  */
+
+.text-kas h2 {
+    font-size: 1.5rem;
+}
+
+
+/*  P i text-kas  */
+
+.text-kas p {
+    margin: 10px 0;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+
+/*  Img i textpic  */
+
+.textpic img {
+    width: 75%;
+    border-radius: 10px;
+}
+
+
+/*  Definerer størrelsen på den caption der er under billederne til højre i de forskellige afsnit  */
+
+figcaption {
+    font-size: small;
+}
+
+
+/*  En wrapper til rækken af fire artikler i hvert afsnit  */
+
+.card-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    box-sizing: border-box;
+    margin-bottom: 2vh;
+}
+
+
+/*  Hvert card er en div, disse er wrapped i et a tag  */
+
+.card-wrapper a {
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 15px;
+    transition: transform .2s;
+}
+
+
+/*  definerer .card div  */
+
+.card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 15px;
+    transition: transform .2s;
+}
+
+
+/*  Giver forstørrelseseffekt når man svæver over et .card  */
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+
+/*  Definerer størrelsen på billedet i hvert enkelt card  */
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/*  Centrerer teksten i .card's h3'ere  */
+
+.card h3 {
+    text-align: center;
+}
+
+
+/*  Definerer placering og linjeafstand for p i hvert enkelt card  */
+
+.card p {
+    text-align: center;
+}
+
+
+/*  Container til hver knap i hvert afsnit (quick tips, basics, teknik og træning) på forsiden  */
+
+.btn-kas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 10%;
+}
+
+/*  Knap i hvert afsnit  */
+
+.altknap {
+    height: 50%;
+    width: 50%;
+    border: 1px solid #ef4820;
+    background-color: #cccdcf;
+    color: #025373;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*  Ændrer baggrunds- og skriftsfarve, samt sætter overgangen til .3 sekunder når man svæver over knappen i afsnittene  */
+
+.altknap:hover {
+    background-color: #025373;
+    color: #cccdcf;
+    transition: .3s;
+}
+
+
+    /*  SPAN TIL FORBOGSTAV  */
+
+
+.f-letter {
+    color: #ef4820;
+}
+
+
+    /*  ORANGE HR  */
+
+
+.partial-hr {
+    width: 30%;
+    margin: 2% auto;
+    border-color: #ef4820;
+
+}
+
+
+/*  FOOTER  */
+
+
+footer {
+    background-image: url(../img/pexels-cottonbro-6701460.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(2, 83, 115, .5);
+    height: 25vh;
+    width: 100%;
+    color: white;
+}
+
+
+/*  Wrapper til .last-wrap og .copy  */
+
+.inner-footer-wrapper {
+    height: 100%;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    line-height: 1.5;
+    color: #cccdcf;
+}
+
+
+/*  Wrapper til .address, .sociallinks og .footer-ul  */
+
+.last-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+/*  Definerer farven på a tags i .last-wrap  */
+
+.last-wrap a {
+    color: #cccdcf;
+}
+
+
+/*  Fjerner dots fra li tags i .last-wrap  */
+
+.last-wrap li {
+    list-style-type: none;
+}
+
+
+/*  Centrerer .sociallinks' child elements vertikalt  */
+
+.sociallinks {
+    display: flex;
+    align-items: center;
+}
+
+
+/*  Organiserer .solinks' child elements horisontalt med space-around (skaber afstand mellem hvert enkelt element)  */
+
+.solinks {
+    width: 20vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+/*  Definerer farve og padding på hvert enkelt a tag i .solink  */
+
+.solink a {
+    color: #ef4820;
+    transition: transform .2s;
+    padding: 1vw;
+}
+
+
+/*  Forstørrer et a tag i .solink halvanden gang, hvis man svæver over det  */
+
+.solink a:hover {
+    transform: scale(1.5);
+}
+
+
+/*  Definerer margin på de praktiske links i højre side af footeren  */
+
+.praclink {
+    margin: 1vh 0;
+}
+
+
+/*  Ændrer farven på et .praclink, når man svæver over det  */
+
+.praclink a:hover {
+    color: #ef4820;
+}
+
+
+/*  Centrerer teksten i .copy i bunden af footeren  */
+
+.copy {
+    text-align: center;
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+
+/*  NY PAGE  */
+
+
+/*  ARTIKEL TEMPLATE  */
+
+
+/*  Header for artikler  */
+
+.header-artikel {
+    width: 100%;
+    height: 50%;
+    background-image: url(../img/pexels-allan-mas-5383519.jpg);
+    background-size: cover;
+    border-bottom: 2px solid #ef4820;
+}
+
+
+/*  Topnav for artikler  */
+
+.topnav.artikelnav {
+    height: 20%;
+}
+
+
+/*  Wrapper for artiklernes hero text  */
+
+#hero-text-artikel-wrapper {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(2, 83, 115, .5);
+    color: white;
+}
+
+
+/*  Hero text for artiklerne - definerer font-size for h1  */
+
+#hero-text-artikel h1 {
+    font-size: 3.5rem;
+}
+
+
+/*  Hero text for artiklerne - definerer font-size for p  */
+
+#hero-text-artikel p {
+    font-size: 2.5rem;
+}
+
+
+/*  definerer tekst centrering for alle child elements af #hero-text-artikel  */
+
+#hero-text-artikel > * {
+    text-align: center;
+}
+
+
+/*  Rammer den lille titel der står over de foreslåede artikler inde i selve artiklen  - 'Foreslåede Artikler'  */
+
+.pseudotitel {
+    background-color: rgba(239, 72, 32, .5);
+    height: 1.8rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+
+/*  baggrundsfarve på foreslaaede artikler  */
+
+.foreslaaede {
+    background-color: rgba(255, 255, 255, 0.5);
+}
